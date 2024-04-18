@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<!-- Facebook Pixel Code -->
+<script>
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1463289143850351');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1463289143850351&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css?v=1.1">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- Primary Meta Tags -->
+    <title>SDGroup</title>
+    <meta name="title" content="SD Group Construct">
+    <meta name="description" content="Sigur și calitativ -
+	Este ceea ce oferim
+
+	Reparații la cheie">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sdgroup.md">
+    <meta property="og:title" content="SD Group Construct">
+    <meta property="og:description" content="Sigur și calitativ -
+	Este ceea ce oferim
+
+	Reparații la cheie">
+    <meta property="og:image" content="assets/favicon.ico">
+</head>
+
+<?php
+if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false)) {
+    header("location: not_supported.php");
+}
+?>
+
+<body id="home" class="should_animate" animate-style="fadeIn">
+    <header>
+        <?php
+        include 'modules/navigation.php';
+        ?>
+        <div class="parallax-container">
+            <div class="parallax" style=" z-index: 12">
+                <img src="assets/header.jpg">
+            </div>
+            <div class="discount_container">
+                <div class="discount d_flex a_c" data-slide="form_container" data-position="end">
+                    <i class="icon-gift"></i>
+                    <span>ASIGURARE IMOBIL</br>12 luni</span>
+                </div>
+                <div class="timer">
+                    <div id="count_down" data-end="Mar 30, 2020 00:00:00" class="d_flex a_c j_c"></div>
+                </div>
+            </div>
+            <div class="welcome_msg">
+                <h2>Sigur și calitativ-</h2>
+                <h1>Este ceea ce oferim!</h1>
+                <h4>Reparații la cheie</h4>
+            </div>
+            <a class="price_link" data-slide="form_container" data-position="end">Află prețul</a>
+        </div>
+        <div id="count_down"></div>
+    </header>
+
+    <div id="promises">
+        <div class="container d_flex a_c j_sb">
+            <div class="item should_animate slower delay-12ds" animate-style="fadeIn">
+                <svg>
+                    <circle class="stroke" cx="60" cy="60" r="50" />
+                    <circle class="stroke2" cx="60" cy="60" r="50" />
+                </svg>
+                <img src="assets/icons/warranty.png" alt="icon" width="93" height="93">
+                <span>Garanție 12 luni</span>
+            </div>
+            <div class="item should_animate slower delay-14ds" animate-style="fadeIn">
+                <svg>
+                    <circle class="stroke" cx="60" cy="60" r="50" />
+                    <circle class="stroke2" cx="60" cy="60" r="50" />
+                </svg>
+                <img src="assets/icons/people.png" alt="icon" width="85" height="85">
+                <span>Echipă calificată</span>
+            </div>
+            <div class="item should_animate slower delay-16ds" animate-style="fadeIn">
+                <svg>
+                    <circle class="stroke" cx="60" cy="60" r="50" />
+                    <circle class="stroke2" cx="60" cy="60" r="50" />
+                </svg>
+                <img src="assets/icons/stars.png" alt="icon" width="85" height="88">
+                <span>Calitate superioară</span>
+            </div>
+            <div class="item should_animate slower delay-18ds" animate-style="fadeIn">
+                <svg>
+                    <circle class="stroke" cx="60" cy="60" r="50" />
+                    <circle class="stroke2" cx="60" cy="60" r="50" />
+                </svg>
+                <img src="assets/icons/scheduale.png" alt="icon" width="86" height="86">
+                <span>Lucrăm în termen</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="should_animate guided" animate-style="fadeIn">
+        <div class="group d_flex j_sb">
+            <div class="group_item">
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                        <div class="flip_card_front">
+                            <img src="assets/cards/locative.jpg" alt="Avatar" width="470" height="595">
+                            <h1>Spații locative</h1>
+                        </div>
+                        <div class="flip_card_back">
+                            <img src="assets/cards/back_locative.jpg" alt="data" width="470" height="595">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group_item">
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                        <div class="flip_card_front">
+                            <img src="assets/cards/commercial.jpg" alt="Avatar" width="470" height="595">
+                            <h1>Spații publice</h1>
+                        </div>
+                        <div class="flip_card_back">
+                            <img src="assets/cards/back_commercial.jpg" alt="data" width="470" height="595">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="group_item">
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                        <div class="flip_card_front">
+                            <img src="assets/cards/office.jpg" alt="Avatar" width="470" height="595">
+                            <h1>Oficii</h1>
+                        </div>
+                        <div class="flip_card_back">
+                            <img src="assets/cards/back_office.jpg" alt="data" width="470" height="595">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="advantages" class="slower should_animate" animate-style="fadeIn">
+        <div class="parallax-container">
+            <div class="parallax"><img src="assets/advantages.jpg"></div>
+            <div class="data d_flex a_c j_sb">
+                <div class="item">
+                    <span class="value" id="happy_item" data-count="82">0</span>
+                    <span class="text">Clienți mulțumiți</span>
+                </div>
+                <div class="item">
+                    <span class="value" id="feedback_item" data-count="27">0</span>
+                    <span class="text">Recenzii</span>
+                </div>
+                <div class="item">
+                    <span class="value" id="years_item" data-count="9">0</span>
+                    <span class="text">Ani experiență</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="plans" class="should_animate d_flex a_c j_sb guided" animate-style="fadeIn">
+        <div class="item">
+            <div class="headings">
+                <span class="bronze">Bronze</span>
+            </div>
+            <div class="flip_card">
+                <div class="flip_card_inner">
+                    <div class="flip_card_front">
+                        <img src="assets/cards/renew.jpg" alt="Avatar" width="470" height="595">
+                        <h1>Înnoire</h1>
+                        <p>de la 600 lei m<sup>2</sup></p>
+                    </div>
+                    <div class="flip_card_back">
+                        <img src="assets/cards/back_renew.jpg" alt="data" width="470" height="595">
+                        <button data-slide="form_container" data-position="end">Contactează-ne</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="headings">
+                <span class="silver">Silver</span>
+            </div>
+            <div class="flip_card">
+                <div class="flip_card_inner">
+                    <div class="flip_card_front">
+                        <img src="assets/cards/cosmetic.jpg" alt="Avatar" width="470" height="595">
+                        <h1>Cosmetică</h1>
+                        <p>de la 900 lei m<sup>2</sup></p>
+                    </div>
+                    <div class="flip_card_back">
+                        <img src="assets/cards/back_cosmetic.jpg" alt="data" width="470" height="595">
+                        <button data-slide="form_container" data-position="end">Contactează-ne</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="headings">
+                <span class="gold">Gold</span>
+            </div>
+            <div class="flip_card">
+                <div class="flip_card_inner">
+                    <div class="flip_card_front">
+                        <img src="assets/cards/capital.jpg" alt="Avatar" width="470" height="595">
+                        <h1>Capital</h1>
+                        <p>de la 1300 lei m<sup>2</sup></p>
+                    </div>
+                    <div class="flip_card_back">
+                        <img src="assets/cards/back_capital.jpg" alt="data" width="470" height="595">
+                        <button data-slide="form_container" data-position="end">Contactează-ne</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="headings">
+                <span class="platinum">Platinum</span>
+            </div>
+            <div class="flip_card">
+                <div class="flip_card_inner">
+                    <div class="flip_card_front">
+                        <img src="assets/cards/individual.jpg" alt="Avatar" width="470" height="595">
+                        <h1>Individual</h1>
+                        <p>de la 1800 lei m<sup>2</sup></p>
+                    </div>
+                    <div class="flip_card_back">
+                        <img src="assets/cards/back_individual.jpg" alt="data" width="470" height="595">
+                        <button data-slide="form_container" data-position="end">Contactează-ne</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="features" class="should_animate d_flex a_c j_c" animate-style="fadeIn">
+        <div class="item">
+            <h4>MATERIALE DE CALITATE</h4>
+            <div class="feats d_flex a_c j_sb">
+                <div>
+                    <svg>
+                        <circle class="stroke" cx="60" cy="60" r="50" />
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                    <img src="assets/icons/bricks.png" alt="icon" width="226" height="178">
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <h4>FIȚI ASIGURAT ÎN ORICE MOMENT</h4>
+            <div class="feats d_flex a_c j_sb">
+                <div>
+                    <svg>
+                        <circle class="stroke" cx="60" cy="60" r="50" />
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                    <img src="assets/icons/shield.png" alt="icon" width="116" height="148">
+                </div>
+            </div>
+        </div>
+        <div class="item large">
+            <h4>ASIGURĂM LINIȘTEA ȘI CONFORTUL</h4>
+            <div class="feats d_flex a_c j_sb">
+                <div class="w3rf">
+                    <svg>
+                        <circle class="stroke" cx="60" cy="60" r="50" />
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                    <img src="assets/icons/cctv.png" alt="icon" width="156" height="116">
+                    <span>SISTEME de SUPRAVEGHERE</span>
+                </div>
+                <div class="w3rf">
+                    <svg>
+                        <circle class="stroke" cx="60" cy="60" r="50" />
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                    <img src="assets/icons/projector.png" alt="icon" width="112" height="112">
+                    <span>Home Cinema</span>
+                </div>
+                <div class="w3rf">
+                    <svg>
+                        <circle class="stroke" cx="60" cy="60" r="50" />
+                        <circle class="stroke2" cx="60" cy="60" r="50" />
+                    </svg>
+                    <img src="assets/icons/audio.png" alt="icon" width="114" height="114">
+                    <span>SISTEME AUDIO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="form_container" class="should_animate d_flex a_c j_c" animate-style="fadeIn">
+        <div class="CEO_container" id="CEO">
+            <img src="assets/CEO.jpg" alt="CEO" class="CEO" width="960" height="1080">
+        </div>
+        <form class="contact_form d_flex a_c" id="contactForm">
+            <div>
+                <h2>Contactează-ne</h2>
+                <div class="contacts">
+                    <div class="d_flex a_c j_c">
+                        <i class="icon-mail"></i>
+                        <a href="mailto:info@sdgroup.md">info@sdgroup.md</a>
+                    </div>
+                    <div class="d_flex a_c j_c">
+                        <i class="icon-phone"></i>
+                        <a href="tel:+373 790 07 778">+373 790 07 778</a>
+                    </div>
+                    <div class="d_flex a_c j_c">
+                        <i class="icon-phone"></i>
+                        <a href="tel:+373 685 07 131">+373 685 07 131</a>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <input autofill id="name" name="name" type="text" pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$" class="validate" required>
+                    <label for="name">Nume</label>
+                    <span class="helper-text" data-error="Numele poate conține doar litere latine" data-success="Valid"></span>
+                </div>
+                <div class="input-field">
+                    <input autofill id="tel" type="tel" name="tel" pattern="^[0-9]{9,9}$" class="validate">
+                    <span class="helper-text" data-error="Ex: 068507131" data-success="Valid"></span>
+                    <label for="tel">Telefon</label>
+                </div>
+                <div class="input-field helper">
+                    <input autofill id="email" type="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" class="validate">
+                    <label for="email">E-mail</label>
+                    <span class="helper-text" data-error="Invalid" data-success="Valid"></span>
+                </div>
+                <div class="input-field privacy d_flex a_c j_c">
+                    <label>
+                        <input type="checkbox" required />
+                        <span></span>
+                    </label>
+                    <span>Sunt de acord cu <a href="assets/SDGROUP%20CONSTRUCT%20SRL%20Politica.pdf" target="_blank" rel="noopener noreferrer">politica de prelucrare a datelor</a></span>
+                </div>
+                <button class="waves-effect waves-light SDbtn" type="submit">Contactează-ne</button>
+            </div>
+        </form>
+    </div>
+    <div id="partners" class="should_animate" animate-style="fadeIn" style="display: none">
+        <h4>Parteneri</h4>
+        <div class="d_flex a_c j_c">
+            <div class="item">
+                <h4>MATERIALE DE CALITATE</h4>
+                <div class="feats d_flex a_c j_sb">
+                    <img src="assets/icons/bricks.png" alt="icon" width="226" height="178">
+                </div>
+            </div>
+            <div class="item">
+                <h4>FIȚI ASIGURAT ÎN ORICE MOMENT</h4>
+                <div class="feats d_flex a_c j_sb">
+                    <img src="assets/icons/shield.png" alt="icon" width="116" height="148">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portofolio" class="should_animate" animate-style="fadeIn">
+        <h4>Portofoliu</h4>
+        <div class="carousel" id="portofolio_slider">
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide1.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide2.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide3.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide4.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide5.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide6.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide7.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide8.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide9.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide10.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide11.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide12.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide13.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide14.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide15.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide16.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide17.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide18.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide19.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide20.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide21.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide22.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide23.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide24.jpg" width="375" height="748"></a>
+            <i class="controlers icon-arrow_left" id="carousel_left"></i>
+            <i class="controlers icon-arrow_right" id="carousel_right"></i>
+        </div>
+    </div>
+    <div id="join_team" class="d_flex a_c j_c">
+        <div class="content d_flex a_c j_sb">
+            <div class="txt_box">
+                <span>Vino în echipa noastră</span>
+                <form id="applyForm">
+                    <div class="input-field">
+                        <input id="application_name" name="application_name" type="text" pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$" class="validate" required>
+                        <label for="application_name">Nume</label>
+                        <span class="helper-text" data-error="Numele poate conține doar litere latine" data-success="Valid"></span>
+                    </div>
+                    <div class="input-field">
+                        <input id="application_tel" type="tel" name="application_tel" pattern="^[0-9]{9,9}$" class="validate" required>
+                        <span class="helper-text" data-error="Ex: 068507131" data-success="Valid"></span>
+                        <label for="application_tel">Telefon</label>
+                    </div>
+                    <div class="input-field">
+                        <button type="submit" class="waves-effect waves-light">
+                            <i class="icon-send"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="feedback txt_box">
+                <div class="controlers d_flex a_c j_sb">
+                    <i class="icon-arrow_left" id="feedback_left"></i>
+                    <i class="icon-arrow_right" id="feedback_right"></i>
+                </div>
+                <span>Recenzii</span>
+                <div class="carousel carousel-slider">
+                    <p class="carousel-item">Angela <br />Pe lângă calitatea serviciilor pe care o oferă, cel mai mult mi-a plăcut că am avut ocazia să achit în rate. Mulțumesc mult echipei pentru înțelegere și susținere. </p>
+                    <p class="carousel-item">Nicoleta<br /> Multumesc companiei SD Group pentru munca depusa si efortul de a satisface un client capricios ca mine (smiley) Unica dorinta a noastra a fost calitatea lucrarilor pe care echipa au realizato cu succes. As vrea sa remarc profesionalismul, integritatea si capacitatea de a lucra cu oamenii. Va multumesc si va urez sa aveti multe comenzi bune si diverse. </p>
+                    <p class="carousel-item">Alina <br />O echipă de nota 10. Toate dorințele mele cu privire la culoarea pereților, laminatului, instalarea și poziționarea lustrelor, au fost îndeplinite. Lucrează calitativ și în termeni utili. Recomand cu mare încredere. </p>
+                    <p class="carousel-item">Cristina și Vadim <br />Ne-au făcut apartamentul exact așa, cum mereu ni l-am dorit. Au ținut cont de toate dorințele noastre care au apărut pe parcurs. Ne-au ajutat să alegem cele mai calitative materiale și ne-au sfătuit cum e mai bine să facem anumite lucruri.  </p>
+                    <p class="carousel-item">Vasile <br />Le-am dat cheia în octombrie, iar în decembrie deja am sărbătorit Crăciunul în casa mea. Accesibil, calitativ și rapid. </p>
+
+                    <p class="carousel-item">Victor <br />Eu personal sunt satisfăcut de tot ce au făcut acești băieți. Mereu mă anunțau la ce etapă sunt lucrările. La solicitare îmi trimiteau poze sau video. Recomand. </p>
+                    <p class="carousel-item">Cristina <br />Mulțumim pentru reparație! Lucru calitativ, rapid și cu minim praf în apartamen</p>
+                    <p class="carousel-item">Foarte mulțumiți de calitatea lucrărilor executate. Această firmă dispune de muncitori calificați, care execută lucrările în termenul stabilit de ambele părți, fără abateri esențiale. Aș vrea să remarc profesionalismul, integritatea și capacitatea de a lucra cu oamenii. Recomand!</p>
+                    <p class="carousel-item">Am apelat la acești băieți.pentru a executa lucrările de reparație într-un apartament cu două camere, construit nou în sectorul Botanica. Am rămas foarte plăcut surprinsă de calitatea lucrărilor executate. Mulțumiri deosebite pentru profesionalismul înalt, susținere și sfaturi acordate privind toate întrebările ce țin de reparație. Recomand cu încredere! </p>
+                    <p class="carousel-item">Baieții ne-au reparat 3 camere - eficient, rapid și foarte calitativ. Rezultatul final mi-a dat peste cap toate așteptările. Cu siguranță profesionalitatea acestora îi va plasa în timpul apropiat pe locurile de frunte în lista companiilor din RM ce prestează astfel de servicii. Recomand! </p>
+                    <p class="carousel-item">O echipă foarte bună. Mulțumesc nespus muncitorilor și administrației pentru serviciile de reparație executate în timpul stabilit. Remarc profesionalitatea, calitatea și accesibilitatea acestora. Un preț foarte bun raportat la calitatea lucrărilor. Voi continua cu plăcere să cooperez cu ei! </p>
+                    <p class="carousel-item">Îmi exprim mulțumirea și recunoștința pentru abordarea profesională de a executa lucrările de reparație. O echipă de oameni calificații, punctuali și profesionaliști. Oferă o abordare absolut nouă în ceea ce ține de prestarea serviciilor. Am recomandat această firmă mai multor prieteni și cunoscuți, care la rândul lor au rămas plăcut surprinși de rezultatul final. Recomand cu sinceritate! </p>
+                    <p class="carousel-item">При организации ремонта дома самой сложной задачей было выбрать с кем работать, в этот раз попробывали через фирму которая предлогала ремонтнные услуги и соблюдающую сроки проведения ремонтных работ. Подключили знакомых, особенно позитивно рекомендовали этих ребят.По началу были опасения, так как зачастую отзывы и реклама не соответствуют реальному уровню , оказанных услуг. Были приятно удивлены, ребята справилась с ремонтом в короткие сроки с задержкой в 9 дней(и все из-за плитки которая пришла с опозданием) , при этом важно заметить, что качество, предоставленных услуг действительно оказалось высоким. Ремонтом довольна, с чистой совестью рекомендую. </p>
+                    <p class="carousel-item">Хотелось бы выразить благодарность ребятам за качество предоставленных услуг по ремонту частного дома. Фирма, провела ремонтные работы в оговоренные сроки, к качеству проделанной работы нет никаких претензий. Следует добавить, что стоимость, предоставленных услуг полностью соответствует их уровню.</p>
+                    <p class="carousel-item">Зная, как проблематично на сегодняшний день найти достойную компанию по предоставлению качественных услуг по ремонту жилых помещений хочу порекомендовать Вам SD Group. Нанимая фирму SD Group Вы получаете оперативно и качественно проделанную работу в приемлемые сроки и по адекватной цене. Рекомендую! P.S а так же получил скидку – приятно ) </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    include 'modules/footer.php';
+    ?>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="" alt="gallery" width="">
+            <i class="icon-close"></i>
+            <i class="modal_control icon-arrow_left" id="modal_left"></i>
+            <i class="modal_control icon-arrow_right" id="modal_right"></i>
+        </div>
+    </div>
+    <script defer src="js/materialize.min.js"></script>
+    <script defer src="js/main.min.js?v=1.3"></script>
+</body>
+
+</html>
