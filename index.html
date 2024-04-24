@@ -51,17 +51,9 @@
     <meta property="og:image" content="assets/favicon.ico">
 </head>
 
-<?php
-if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (strpos($_SERVER['HTTP_USER_AGENT'], 'Trident/7.0; rv:11.0') !== false)) {
-    header("location: not_supported.php");
-}
-?>
-
 <body id="home" class="should_animate" animate-style="fadeIn">
     <header>
-        <?php
-        include 'modules/navigation.php';
-        ?>
+ 
         <div class="parallax-container">
             <div class="parallax" style=" z-index: 12">
                 <img src="assets/header.jpg">
@@ -458,9 +450,7 @@ if (preg_match('~MSIE|Internet Explorer~i', $_SERVER['HTTP_USER_AGENT']) || (str
             </div>
         </div>
     </div>
-    <?php
-    include 'modules/footer.php';
-    ?>
+
     <div id="modal" class="modal">
         <div class="modal-content">
             <img src="" alt="gallery" width="">
