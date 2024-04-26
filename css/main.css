@@ -5438,7 +5438,8 @@ header .welcome_msg span {
   width: calc(100% - 30px);
   max-width: 1920px;
   margin: 20px auto;
-  height: 520px;
+  height: auto;
+  min-height: 600px;
 }
 #plans .item {
   width: 25%;
