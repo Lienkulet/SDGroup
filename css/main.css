@@ -6299,6 +6299,12 @@ header .parallax-container .discount_container .discount {
     font-size: 26px;
   }
 
+  #plans {
+    flex-wrap: wrap;
+    height: fit-content;
+    min-height: 2050px;
+  }
+
   #plans .item {
     width: 100%;
   }
@@ -6310,7 +6316,8 @@ header .parallax-container .discount_container .discount {
   }
 
   #services .group {
-    flex-wrap: wrap;
+      height: fit-content;
+      min-height: 1400px !important;
   }
   #services .group .group_item {
     width: 100%;
