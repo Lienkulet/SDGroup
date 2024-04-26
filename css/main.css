@@ -6187,6 +6187,8 @@ header .parallax-container .discount_container .discount {
 
   #plans {
     flex-wrap: wrap;
+    height: fit-content;
+    min-height: 1750px;
   }
   #plans .item {
     width: calc(50% - 10px);
@@ -6230,6 +6232,8 @@ header .parallax-container .discount_container .discount {
 @media screen and (max-width: 650px) {
   #services .group {
     flex-wrap: wrap;
+    height: fit-content;
+    min-height: 1250px;
   }
   #services .group .group_item {
     width: 60%;
