@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    gap: 30px;
+    background-color: red !important;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 9999;
+}
+
+.alingcenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.row-block{
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+}
+
+.half {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    background-color: #fff;
+}
+
+.left-half {
+    background-color: yellow;
+}
+
+.row:nth-child(1) .right-half {
+    background-image: url('/assets/slider/slide10.jpg');
+}
+.row:nth-child(2) .left-half {
+    background-color: #fff;
+    background-image: url('/assets/slider/slide1.jpg');
+}
+
+@media only screen and (max-width: 768px) {
+    .half{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .row{
+        flex-direction: row;
+    }
+    .left-half {
+        background-color: yellow;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+    }
+    .right-half {
+        background-color: yellow;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        margin-left: -98%;
+    }
+    .row:nth-child(2) .left-half {
+        background-color: #fff;
+        clip-path: polygon(100% 100%, 0% 100%, 0 0);
+    }
+    .row:nth-child(2) .right-half {
+        background-color: #fff;
+        clip-path: polygon(100% 100%, 100% 0, 0 0);
+    }
+    
+    .row:nth-child(2) .half{
+       align-items: end;
+    } 
+}

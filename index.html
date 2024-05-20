@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <!-- Facebook Pixel Code -->
 <script>
-    ! function(f, b, e, v, n, t, s) {
+    ! function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
-        n = f.fbq = function() {
+        n = f.fbq = function () {
             n.callMethod ?
                 n.callMethod.apply(n, arguments) : n.queue.push(arguments)
         };
@@ -24,7 +23,8 @@
     fbq('init', '1463289143850351');
     fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1463289143850351&ev=PageView&noscript=1" /></noscript>
+<noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1463289143850351&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
 
 <head>
@@ -53,7 +53,41 @@
 
 <body id="home" class="should_animate" animate-style="fadeIn">
     <header>
- 
+        <nav class="navbar nav_container">
+            <a href="/index.html" class="nav-logo">
+                <img src="/assets/logo.png" alt="">
+            </a>
+            <a class="hover-underline-animation" href="/index.html">Acasă</a>
+            <a class="hover-underline-animation" href="/servicii.html">Servicii</a>
+            <a class="hover-underline-animation" href="/despre.html">Despre noi</a>
+            <a class="hover-underline-animation" href="/proiecte.html">Proiecte</a>
+            <a class="hover-underline-animation" href="/parteneri.html">Parteneri</a>
+            <a class="hover-underline-animation" href="/contacte.html">Contacte</a>
+            <div class="nav-contact">
+                <a class="hover-underline-animation" href="mailto:info@sdgroup.md">info@sdgroup.md</a>
+                <a class="hover-underline-animation" href="tel:+37379007778">+373 790 07 778</a>
+            </div>
+        </nav>
+        <nav class="navbar-mobile">
+            <a href="/index.html" class="nav-logo">
+                <img src="/assets/logo.png" alt="">
+            </a>
+            <div class="nav-contact">
+                <a class="hover-underline-animation" href="mailto:info@sdgroup.md">info@sdgroup.md</a>
+                <a class="hover-underline-animation" href="tel:+37379007778">+373 790 07 778</a>
+            </div>
+            <button id="navbtn">
+                <img src="/assets/burger-menu-svgrepo-com.png" alt="">
+            </button>
+            <div id="navmobile">
+                <a class="hover-underline-animation" href="/index.html">Acasă</a>
+                <a class="hover-underline-animation" href="/servicii.html">Servicii</a>
+                <a class="hover-underline-animation" href="/despre.html">Despre noi</a>
+                <a class="hover-underline-animation" href="/proiecte.html">Proiecte</a>
+                <a class="hover-underline-animation" href="/parteneri.html">Parteneri</a>
+                <a class="hover-underline-animation" href="/contacte.html">Contacte</a>
+            </div>
+        </nav>
         <div class="parallax-container">
             <div class="parallax" style=" z-index: 12">
                 <img src="assets/header.jpg">
@@ -64,7 +98,7 @@
                     <span>ASIGURARE IMOBIL</br>12 luni</span>
                 </div>
                 <div class="timer">
-                    <div id="count_down" data-end="April 30, 2024 00:00:00" class="d_flex a_c j_c"></div>
+                    <div id="count_down" data-end="June 30, 2024 00:00:00" class="d_flex a_c j_c"></div>
                 </div>
             </div>
             <div class="welcome_msg">
@@ -133,7 +167,7 @@
             </div>
         </div>
     </div>
-    
+
     <div id="features" class="should_animate d_flex a_c j_c" animate-style="fadeIn">
         <div class="item">
             <h4>MATERIALE DE CALITATE</h4>
@@ -233,7 +267,7 @@
         </div>
     </div>
     <!-- a_c -->
-     <div id="plans" class="should_animate d_flex j_sb guided" animate-style="fadeIn">
+    <div id="plans" class="should_animate d_flex j_sb guided" animate-style="fadeIn">
         <div class="item">
             <div class="headings">
                 <span class="bronze">Bronze</span>
@@ -329,9 +363,11 @@
                     </div>
                 </div>
                 <div class="input-field">
-                    <input autofill id="name" name="name" type="text" pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$" class="validate" required>
+                    <input autofill id="name" name="name" type="text" pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$"
+                        class="validate" required>
                     <label for="name">Nume</label>
-                    <span class="helper-text" data-error="Numele poate conține doar litere latine" data-success="Valid"></span>
+                    <span class="helper-text" data-error="Numele poate conține doar litere latine"
+                        data-success="Valid"></span>
                 </div>
                 <div class="input-field">
                     <input autofill id="tel" type="tel" name="tel" pattern="^[0-9]{9,9}$" class="validate">
@@ -339,7 +375,8 @@
                     <label for="tel">Telefon</label>
                 </div>
                 <div class="input-field helper">
-                    <input autofill id="email" type="email" name="email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" class="validate">
+                    <input autofill id="email" type="email" name="email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" class="validate">
                     <label for="email">E-mail</label>
                     <span class="helper-text" data-error="Invalid" data-success="Valid"></span>
                 </div>
@@ -348,7 +385,8 @@
                         <input type="checkbox" required />
                         <span></span>
                     </label>
-                    <span>Sunt de acord cu <a href="assets/SDGROUP%20CONSTRUCT%20SRL%20Politica.pdf" target="_blank" rel="noopener noreferrer">politica de prelucrare a datelor</a></span>
+                    <span>Sunt de acord cu <a href="assets/SDGROUP%20CONSTRUCT%20SRL%20Politica.pdf" target="_blank"
+                            rel="noopener noreferrer">politica de prelucrare a datelor</a></span>
                 </div>
                 <button class="waves-effect waves-light SDbtn" type="submit">Contactează-ne</button>
             </div>
@@ -374,30 +412,54 @@
     <div id="portofolio" class="should_animate" animate-style="fadeIn">
         <h4>Portofoliu</h4>
         <div class="carousel" id="portofolio_slider">
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide1.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide2.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide3.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide4.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide5.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide6.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide7.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide8.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide9.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide10.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide11.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide12.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide13.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide14.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide15.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide16.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide17.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide18.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide19.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide20.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide21.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide22.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide23.jpg" width="375" height="748"></a>
-            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide24.jpg" width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide1.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide2.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide3.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide4.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide5.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide6.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide7.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide8.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide9.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide10.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide11.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide12.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide13.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide14.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide15.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide16.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide17.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide18.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide19.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide20.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide21.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide22.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide23.jpg"
+                    width="375" height="748"></a>
+            <a class="carousel-item modal-trigger" href="#modal"><img loading="lazy" src="assets/slider/slide24.jpg"
+                    width="375" height="748"></a>
             <i class="controlers icon-arrow_left" id="carousel_left"></i>
             <i class="controlers icon-arrow_right" id="carousel_right"></i>
         </div>
@@ -408,12 +470,15 @@
                 <span>Vino în echipa noastră</span>
                 <form id="applyForm">
                     <div class="input-field">
-                        <input id="application_name" name="application_name" type="text" pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$" class="validate" required>
+                        <input id="application_name" name="application_name" type="text"
+                            pattern="^[a-zA-ZșțȘȚâîÎ ]{2,30}$" class="validate" required>
                         <label for="application_name">Nume</label>
-                        <span class="helper-text" data-error="Numele poate conține doar litere latine" data-success="Valid"></span>
+                        <span class="helper-text" data-error="Numele poate conține doar litere latine"
+                            data-success="Valid"></span>
                     </div>
                     <div class="input-field">
-                        <input id="application_tel" type="tel" name="application_tel" pattern="^[0-9]{9,9}$" class="validate" required>
+                        <input id="application_tel" type="tel" name="application_tel" pattern="^[0-9]{9,9}$"
+                            class="validate" required>
                         <span class="helper-text" data-error="Ex: 068507131" data-success="Valid"></span>
                         <label for="application_tel">Telefon</label>
                     </div>
@@ -431,22 +496,66 @@
                 </div>
                 <span>Recenzii</span>
                 <div class="carousel carousel-slider">
-                    <p class="carousel-item">Angela <br />Pe lângă calitatea serviciilor pe care o oferă, cel mai mult mi-a plăcut că am avut ocazia să achit în rate. Mulțumesc mult echipei pentru înțelegere și susținere. </p>
-                    <p class="carousel-item">Nicoleta<br /> Multumesc companiei SD Group pentru munca depusa si efortul de a satisface un client capricios ca mine (smiley) Unica dorinta a noastra a fost calitatea lucrarilor pe care echipa au realizato cu succes. As vrea sa remarc profesionalismul, integritatea si capacitatea de a lucra cu oamenii. Va multumesc si va urez sa aveti multe comenzi bune si diverse. </p>
-                    <p class="carousel-item">Alina <br />O echipă de nota 10. Toate dorințele mele cu privire la culoarea pereților, laminatului, instalarea și poziționarea lustrelor, au fost îndeplinite. Lucrează calitativ și în termeni utili. Recomand cu mare încredere. </p>
-                    <p class="carousel-item">Cristina și Vadim <br />Ne-au făcut apartamentul exact așa, cum mereu ni l-am dorit. Au ținut cont de toate dorințele noastre care au apărut pe parcurs. Ne-au ajutat să alegem cele mai calitative materiale și ne-au sfătuit cum e mai bine să facem anumite lucruri.  </p>
-                    <p class="carousel-item">Vasile <br />Le-am dat cheia în octombrie, iar în decembrie deja am sărbătorit Crăciunul în casa mea. Accesibil, calitativ și rapid. </p>
+                    <p class="carousel-item">Angela <br />Pe lângă calitatea serviciilor pe care o oferă, cel mai mult
+                        mi-a plăcut că am avut ocazia să achit în rate. Mulțumesc mult echipei pentru înțelegere și
+                        susținere. </p>
+                    <p class="carousel-item">Nicoleta<br /> Multumesc companiei SD Group pentru munca depusa si efortul
+                        de a satisface un client capricios ca mine (smiley) Unica dorinta a noastra a fost calitatea
+                        lucrarilor pe care echipa au realizato cu succes. As vrea sa remarc profesionalismul,
+                        integritatea si capacitatea de a lucra cu oamenii. Va multumesc si va urez sa aveti multe
+                        comenzi bune si diverse. </p>
+                    <p class="carousel-item">Alina <br />O echipă de nota 10. Toate dorințele mele cu privire la
+                        culoarea pereților, laminatului, instalarea și poziționarea lustrelor, au fost îndeplinite.
+                        Lucrează calitativ și în termeni utili. Recomand cu mare încredere. </p>
+                    <p class="carousel-item">Cristina și Vadim <br />Ne-au făcut apartamentul exact așa, cum mereu ni
+                        l-am dorit. Au ținut cont de toate dorințele noastre care au apărut pe parcurs. Ne-au ajutat să
+                        alegem cele mai calitative materiale și ne-au sfătuit cum e mai bine să facem anumite lucruri. 
+                    </p>
+                    <p class="carousel-item">Vasile <br />Le-am dat cheia în octombrie, iar în decembrie deja am
+                        sărbătorit Crăciunul în casa mea. Accesibil, calitativ și rapid. </p>
 
-                    <p class="carousel-item">Victor <br />Eu personal sunt satisfăcut de tot ce au făcut acești băieți. Mereu mă anunțau la ce etapă sunt lucrările. La solicitare îmi trimiteau poze sau video. Recomand. </p>
-                    <p class="carousel-item">Cristina <br />Mulțumim pentru reparație! Lucru calitativ, rapid și cu minim praf în apartamen</p>
-                    <p class="carousel-item">Foarte mulțumiți de calitatea lucrărilor executate. Această firmă dispune de muncitori calificați, care execută lucrările în termenul stabilit de ambele părți, fără abateri esențiale. Aș vrea să remarc profesionalismul, integritatea și capacitatea de a lucra cu oamenii. Recomand!</p>
-                    <p class="carousel-item">Am apelat la acești băieți.pentru a executa lucrările de reparație într-un apartament cu două camere, construit nou în sectorul Botanica. Am rămas foarte plăcut surprinsă de calitatea lucrărilor executate. Mulțumiri deosebite pentru profesionalismul înalt, susținere și sfaturi acordate privind toate întrebările ce țin de reparație. Recomand cu încredere! </p>
-                    <p class="carousel-item">Baieții ne-au reparat 3 camere - eficient, rapid și foarte calitativ. Rezultatul final mi-a dat peste cap toate așteptările. Cu siguranță profesionalitatea acestora îi va plasa în timpul apropiat pe locurile de frunte în lista companiilor din RM ce prestează astfel de servicii. Recomand! </p>
-                    <p class="carousel-item">O echipă foarte bună. Mulțumesc nespus muncitorilor și administrației pentru serviciile de reparație executate în timpul stabilit. Remarc profesionalitatea, calitatea și accesibilitatea acestora. Un preț foarte bun raportat la calitatea lucrărilor. Voi continua cu plăcere să cooperez cu ei! </p>
-                    <p class="carousel-item">Îmi exprim mulțumirea și recunoștința pentru abordarea profesională de a executa lucrările de reparație. O echipă de oameni calificații, punctuali și profesionaliști. Oferă o abordare absolut nouă în ceea ce ține de prestarea serviciilor. Am recomandat această firmă mai multor prieteni și cunoscuți, care la rândul lor au rămas plăcut surprinși de rezultatul final. Recomand cu sinceritate! </p>
-                    <p class="carousel-item">При организации ремонта дома самой сложной задачей было выбрать с кем работать, в этот раз попробывали через фирму которая предлогала ремонтнные услуги и соблюдающую сроки проведения ремонтных работ. Подключили знакомых, особенно позитивно рекомендовали этих ребят.По началу были опасения, так как зачастую отзывы и реклама не соответствуют реальному уровню , оказанных услуг. Были приятно удивлены, ребята справилась с ремонтом в короткие сроки с задержкой в 9 дней(и все из-за плитки которая пришла с опозданием) , при этом важно заметить, что качество, предоставленных услуг действительно оказалось высоким. Ремонтом довольна, с чистой совестью рекомендую. </p>
-                    <p class="carousel-item">Хотелось бы выразить благодарность ребятам за качество предоставленных услуг по ремонту частного дома. Фирма, провела ремонтные работы в оговоренные сроки, к качеству проделанной работы нет никаких претензий. Следует добавить, что стоимость, предоставленных услуг полностью соответствует их уровню.</p>
-                    <p class="carousel-item">Зная, как проблематично на сегодняшний день найти достойную компанию по предоставлению качественных услуг по ремонту жилых помещений хочу порекомендовать Вам SD Group. Нанимая фирму SD Group Вы получаете оперативно и качественно проделанную работу в приемлемые сроки и по адекватной цене. Рекомендую! P.S а так же получил скидку – приятно ) </p>
+                    <p class="carousel-item">Victor <br />Eu personal sunt satisfăcut de tot ce au făcut acești băieți.
+                        Mereu mă anunțau la ce etapă sunt lucrările. La solicitare îmi trimiteau poze sau video.
+                        Recomand. </p>
+                    <p class="carousel-item">Cristina <br />Mulțumim pentru reparație! Lucru calitativ, rapid și cu
+                        minim praf în apartamen</p>
+                    <p class="carousel-item">Foarte mulțumiți de calitatea lucrărilor executate. Această firmă dispune
+                        de muncitori calificați, care execută lucrările în termenul stabilit de ambele părți, fără
+                        abateri esențiale. Aș vrea să remarc profesionalismul, integritatea și capacitatea de a lucra cu
+                        oamenii. Recomand!</p>
+                    <p class="carousel-item">Am apelat la acești băieți.pentru a executa lucrările de reparație într-un
+                        apartament cu două camere, construit nou în sectorul Botanica. Am rămas foarte plăcut surprinsă
+                        de calitatea lucrărilor executate. Mulțumiri deosebite pentru profesionalismul înalt, susținere
+                        și sfaturi acordate privind toate întrebările ce țin de reparație. Recomand cu încredere! </p>
+                    <p class="carousel-item">Baieții ne-au reparat 3 camere - eficient, rapid și foarte calitativ.
+                        Rezultatul final mi-a dat peste cap toate așteptările. Cu siguranță profesionalitatea acestora
+                        îi va plasa în timpul apropiat pe locurile de frunte în lista companiilor din RM ce prestează
+                        astfel de servicii. Recomand! </p>
+                    <p class="carousel-item">O echipă foarte bună. Mulțumesc nespus muncitorilor și administrației
+                        pentru serviciile de reparație executate în timpul stabilit. Remarc profesionalitatea, calitatea
+                        și accesibilitatea acestora. Un preț foarte bun raportat la calitatea lucrărilor. Voi continua
+                        cu plăcere să cooperez cu ei! </p>
+                    <p class="carousel-item">Îmi exprim mulțumirea și recunoștința pentru abordarea profesională de a
+                        executa lucrările de reparație. O echipă de oameni calificații, punctuali și profesionaliști.
+                        Oferă o abordare absolut nouă în ceea ce ține de prestarea serviciilor. Am recomandat această
+                        firmă mai multor prieteni și cunoscuți, care la rândul lor au rămas plăcut surprinși de
+                        rezultatul final. Recomand cu sinceritate! </p>
+                    <p class="carousel-item">При организации ремонта дома самой сложной задачей было выбрать с кем
+                        работать, в этот раз попробывали через фирму которая предлогала ремонтнные услуги и соблюдающую
+                        сроки проведения ремонтных работ. Подключили знакомых, особенно позитивно рекомендовали этих
+                        ребят.По началу были опасения, так как зачастую отзывы и реклама не соответствуют реальному
+                        уровню , оказанных услуг. Были приятно удивлены, ребята справилась с ремонтом в короткие сроки с
+                        задержкой в 9 дней(и все из-за плитки которая пришла с опозданием) , при этом важно заметить,
+                        что качество, предоставленных услуг действительно оказалось высоким. Ремонтом довольна, с чистой
+                        совестью рекомендую. </p>
+                    <p class="carousel-item">Хотелось бы выразить благодарность ребятам за качество предоставленных
+                        услуг по ремонту частного дома. Фирма, провела ремонтные работы в оговоренные сроки, к качеству
+                        проделанной работы нет никаких претензий. Следует добавить, что стоимость, предоставленных услуг
+                        полностью соответствует их уровню.</p>
+                    <p class="carousel-item">Зная, как проблематично на сегодняшний день найти достойную компанию по
+                        предоставлению качественных услуг по ремонту жилых помещений хочу порекомендовать Вам SD Group.
+                        Нанимая фирму SD Group Вы получаете оперативно и качественно проделанную работу в приемлемые
+                        сроки и по адекватной цене. Рекомендую! P.S а так же получил скидку – приятно ) </p>
                 </div>
             </div>
         </div>
@@ -462,6 +571,7 @@
     </div>
     <script defer src="js/materialize.min.js"></script>
     <script defer src="js/main.min.js?v=1.3"></script>
+    <script src="/js/nav.js"></script>
 </body>
 
 </html>

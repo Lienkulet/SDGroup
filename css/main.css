@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
@@ -6412,3 +6413,121 @@ header .parallax-container .discount_container .discount {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.navbar, .navbar-mobile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  gap: 30px;
+  background-color: #fff !important;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.navbar a, .navbar-mobile a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+}
+
+.nav-contact a{
+  font-size: 16px !important;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #5EB6E4;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5EB6E4;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-logo img{
+  height: 50px;
+  cursor: pointer;
+}
+
+.navbar-mobile{
+  display: none;
+}
+
+#navbtn{
+  align-self: flex-end;
+  justify-content: flex-end;
+  background-color: transparent;
+  border: 0;
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+#navbtn img{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-self: flex-end !important;
+  justify-content: flex-end;
+}
+
+#navmobile{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80px;
+  padding: 10px;
+  gap: 10px;
+  width: 100%;
+  background-color: #fff;
+}
+
+#navmobile a{
+  font-size: 16px !important;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar-mobile{
+    display: flex !important;
+  }
+
+  .navbar{
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .servicii .row{
+      flex-direction: column !important;
+  }
+
+  #form_container{
+      flex-direction: column !important;
+  }
+}

@@ -2,34 +2,9 @@ window.addEventListener('load', function () {
     let body = this.document.querySelector("body");
     if (/Edge/.test(navigator.userAgent))
         body.classList.add("isEdge");
-    let navbar = this.document.querySelector(".nav_container nav");
-    function animateCSS(element, animationName, callback) {
-        const node = element;
-        node.classList.add('animated', animationName)
-
-        function handleAnimationEnd() {
-            node.classList.remove(animationName)
-            node.removeEventListener('animationend', handleAnimationEnd)
-
-            if (typeof callback === 'function') callback()
-        }
-
-        node.addEventListener('animationend', handleAnimationEnd)
-    }
-
-    let fixed = false,
-        toogleNav = (topScroll) => {
-            if (!fixed && topScroll > 0) {
-                fixed = true;
-                navbar.classList.add("active");
-            }
-            else if (fixed && topScroll == 0) {
-                fixed = false;
-                navbar.classList.remove("active");
-            }
-        }
+    l
+    
     var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    toogleNav(scrollTop);
     var viwe_offset = window.innerWidth > 425 ? 240 : 0;
     function animateLoad(element, animation, callback) {
         let node = element,
