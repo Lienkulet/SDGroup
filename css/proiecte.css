@@ -47,6 +47,8 @@
     background-color: black;
     cursor: pointer;
     object-fit: contain;
+    font: 500 normal 1.25rem Raleway, sans-serif;
+
 }
 
 .row-block img{

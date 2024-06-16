@@ -51,6 +51,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.head-text{
+  font-size: 1.25rem;
+  max-width: 1000px;
+  text-align: center;
+}
+
 
 .icon-mail:before {
   content: "";
