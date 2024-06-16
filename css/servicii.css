@@ -150,4 +150,17 @@ ol{
     .navbar {
         display: none; /* Hide desktop navbar */
     }
+
+    .instrument{
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .row-block h3{
+        margin-top: 10px;
+    }
+
+    .row-block p{
+        margin-bottom: 10px;
+    }
 }
