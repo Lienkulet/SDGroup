@@ -207,7 +207,7 @@ nav .nav-right .close:hover {
 }
 
 .quote-section {
-    background: #f4f4f4;
+    background-image: url('/assets/brick_bg.png');
     text-align: center;
     padding: 40px;
 }
@@ -219,7 +219,8 @@ nav .nav-right .close:hover {
     font-size: 24px;
     font-style: italic;
     color: #555;
-    border-left: 5px solid #039be5 !important;
+    /* border-left: 5px solid #039be5 !important; */
+    border-left: 0px;
 }
 
 .quote-section blockquote footer {
