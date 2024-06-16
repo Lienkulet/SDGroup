@@ -6501,6 +6501,9 @@ header .parallax-container .discount_container .discount {
   justify-content: flex-end;
 }
 
+/* .active{
+  display: flex !important;
+} */
 #navmobile{
   display: none;
   flex-direction: column;
