@@ -1,3 +1,20 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway/Raleway-Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url("../assets/fonts/Raleway/Raleway-Light.ttf") format("truetype");
+    font-weight: 300;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -39,8 +56,8 @@
 
 .contacte-header{
     padding-top: 100px;
-    padding-bottom: 30px;
     gap: 10px;
+    font: 500 normal 1.25rem Raleway, sans-serif;
 }
 
 .contacte-header .row{
@@ -49,7 +66,7 @@
 
 .contacte{
     max-width: 1000px;
-    margin: 70px auto;
+    margin: 30px auto;
 }
 
 .contact_block{
@@ -60,11 +77,17 @@
     gap: 10px;
 }
 
+.socials i{
+    font-size: 25px;
+}
+
 .contact_block .contacts{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font: 400 normal 16px / 0.9 sans-serif;
+    /* font: 400 normal 16px / 0.9 sans-serif; */
+    font: 500 normal 16px / 0.9 Raleway, sans-serif;
+
 }
 .contact_block .contacts a{
     color: #282629;
