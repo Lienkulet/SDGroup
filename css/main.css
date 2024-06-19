@@ -6433,6 +6433,12 @@ header .parallax-container .discount_container .discount {
   z-index: 10;
 }
 
+.navbar-mobile{
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
 .navbar a, .navbar-mobile a{
   color: black;
   text-decoration: none;
