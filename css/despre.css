@@ -232,6 +232,7 @@ nav .nav-right .close:hover {
 
 .team-section{
     font: 500 normal 1.25rem Raleway, sans-serif;
+    background-image: url('/assets/brick_bg.png');
 }
 
 .card {
@@ -244,7 +245,7 @@ nav .nav-right .close:hover {
     flex-direction: column;
     align-items: center;
     font-size: 1rem;
-
+    background-color: #fff;
 }
 .icon {
     margin-bottom: 12px;
