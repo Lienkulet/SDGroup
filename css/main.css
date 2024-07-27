@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 @font-face {
   font-family: "Raleway";
@@ -6419,6 +6418,185 @@ header .parallax-container .discount_container .discount {
 }
 
 /*# sourceMappingURL=main.css.map */
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.calculator{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+  font: 500 normal 1.25rem Raleway, sans-serif;
+}
+/* .calculatorInput{
+  width: 50px !important;
+  height: 50px !important;
+  margin: 0 !important;
+  padding-inline: 0 !important;
+  padding-block: 0 !important;
+} */
+
+.calculatorInput {
+  width: 70px !important;
+  height: 50px !important;
+  margin: 10px 0 !important;
+  box-sizing: border-box !important;
+  border: 2px solid #ccc !important;
+  border-radius: 12px !important;
+  background-color: #f8f8f8 !important;
+  font-size: 16px !important;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
+}
+
+.calculatorInput:focus {
+  border-color: #4A90E2 !important;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5) !important;
+  outline: none !important;
+}
+
+.styled-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.styled-select select {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.styled-select::after {
+  content: '▼';
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  pointer-events: none;
+  color: #999;
+}
+
+.calculatorBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.calculator-wrapper button{
+  width: 200px;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0px 6px 27px 0 rgba(0, 0, 0, 0.24);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(70, 174, 247, 0.79)), to(rgba(29, 213, 230, 0.79)));
+  background-image: linear-gradient(to top, rgba(70, 174, 247, 0.79), rgba(29, 213, 230, 0.79));
+  font: 300 normal 16px Raleway;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+}
+
+.calculator-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/brick_bg.png');
+  font: 500 normal 1.25rem Raleway, sans-serif;
+}
+
+.calcultaorBlockHeader{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font: 500 normal 1.25rem Raleway, sans-serif;
+
+}
+
+.calculator-choice{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.calculatorContact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calculatorContact h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333333;
+}
+
+.calculatorContact h4 {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.calculatorContact input {
+  width: 220px !important;
+  padding: 10px !important;
+  margin-bottom: 15px !important;
+ 
+  box-sizing: border-box !important;
+  border: 2px solid #ccc !important;
+  border-radius: 12px !important;
+  background-color: #f8f8f8 !important;
+  font-size: 16px !important;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s !important;
+}
+
+.calculatorContact input:focus {
+  border-color: #4A90E2 !important;
+  outline: none !important;
+}
 
 .navbar, .navbar-mobile{
   display: flex;
