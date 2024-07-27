@@ -193,7 +193,7 @@ calculatorBtn.addEventListener('click', (e) =>{
         else if(planID.value === 'cosmetic') finalPrice = cosmetic;
         else finalPrice = individual;
 
-        price_final.innerText = `Pret final: ${parseInt(finalPrice)} euro`;
+        price_final.innerText = `Pret final: ${parseInt(finalPrice)} euro per m2`;
         sendEmail(finalPrice, suprafataPereti, suprafataPodea, perimetru);
     }
 })

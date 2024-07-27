@@ -6598,6 +6598,19 @@ header .parallax-container .discount_container .discount {
   outline: none !important;
 }
 
+@media only screen and (max-width: 760px) {
+  .calculatorContact,
+  .calculator {
+    flex-direction: column;
+  }
+
+  .calculator{
+    padding: 0 10px;
+    align-items: center;
+
+  }
+}
+
 .navbar, .navbar-mobile{
   display: flex;
   flex-direction: row;
