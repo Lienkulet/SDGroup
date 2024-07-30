@@ -191,9 +191,9 @@ calculatorBtn.addEventListener('click', (e) =>{
         if(planID.value === 'capital') finalPrice = capital;
         else if(planID.value === 'inoire') finalPrice = inoire;
         else if(planID.value === 'cosmetic') finalPrice = cosmetic;
-        else finalPrice = individual;
+        else finalPrice = individual / suprafataPodea ;
 
-        price_final.innerText = `Pret final: ${parseInt(finalPrice)} euro per m2`;
+        price_final.innerText = `Pret final: ${parseInt(finalPrice)}€ per m2`;
         sendEmail(finalPrice, suprafataPereti, suprafataPodea, perimetru);
     }
 })

@@ -6576,7 +6576,12 @@ header .parallax-container .discount_container .discount {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  font: 500 normal 1.25rem Raleway, sans-serif;
   color: #555555;
+}
+
+.calculatorContact{
+  font: 500 normal 1.25rem Raleway, sans-serif;
 }
 
 .calculatorContact input {
@@ -6603,11 +6608,21 @@ header .parallax-container .discount_container .discount {
   .calculator {
     flex-direction: column;
   }
-
-  .calculator{
+  .calculator-wrapper{
     padding: 0 10px;
     align-items: center;
+  }
+  .calculator-wrapper{
+    font: 500 normal 1rem Raleway, sans-serif;
+  }
 
+  .calculatorBlock{
+    width: 100%;
+  }
+
+  .calculatorContact .flex-row{
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
