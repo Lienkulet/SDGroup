@@ -6626,6 +6626,16 @@ header .parallax-container .discount_container .discount {
   }
 }
 
+#price_final{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.calcprice{
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .navbar, .navbar-mobile{
   display: flex;
   flex-direction: row;

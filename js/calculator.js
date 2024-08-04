@@ -104,11 +104,12 @@ function sendEmail(finalPrice, suprafataPereti, suprafataPodea, perimetru){
 
 calculatorBtn.addEventListener('click', (e) =>{
     e.preventDefault();
+    debugger;
     if(validator()){
         let perimetru = totalSpace.value * 1.2;
         let suprafataPereti = perimetru * height.value;
-        let suprafataPodea = totalSpace.value;
-        let suprafataTavan = totalSpace.value;
+        let suprafataPodea = parseFloat(totalSpace.value);
+        let suprafataTavan = parseFloat(totalSpace.value);
         let suprafataBaie = 100;
 
         // pretul lucrarile executate si numarul executat
@@ -188,13 +189,134 @@ calculatorBtn.addEventListener('click', (e) =>{
 
         let finalPrice;
 
-        if(planID.value === 'capital') finalPrice = capital;
-        else if(planID.value === 'inoire') finalPrice = inoire;
-        else if(planID.value === 'cosmetic') finalPrice = cosmetic;
-        else finalPrice = individual / suprafataPodea ;
+        if(planID.value === 'capital') finalPrice = parseInt(capital);
+        else if(planID.value === 'inoire') finalPrice = parseInt(inoire);
+        else if(planID.value === 'cosmetic') finalPrice = parseInt(cosmetic);
+        else finalPrice = parseInt(individual);
 
-        price_final.innerText = `Pret final: ${parseInt(finalPrice)}€ per m2`;
+        if(totalSpace.value == 0) finalPrice = 0;
+       // else finalPrice = finalPrice / totalSpace.value;
+
+        price_final.innerHTML = `<p>Pret Final: <strong class="calcprice">${finalPrice}€</strong> per m<sup>2</sup></p>`;
         sendEmail(finalPrice, suprafataPereti, suprafataPodea, perimetru);
+
+
+
+       // Create Excel file
+       let ws_data = [
+           ['Suprafata totala al apartamentului', totalSpace.value, 'm2'],
+           ['Inaltimea', height.value, 'm2'],
+           ['Perimetru', perimetru, 'm'],
+           ['Suprafata Pereti', suprafataPereti, 'm2'],
+           ['Suprafata Podea', suprafataPodea, 'm2'],
+           ['Suprafata Tavan', suprafataTavan, 'm2'],
+           ['Suprafata Baie', suprafataBaie, 'm2'],
+           ['Electricitate'],
+           ['Numarul corpurilor de iluminat', bulbs.value, 'buc'],
+           ['Numarul prizelor si intrerupatoarelor', outlet.value, 'buc'],
+           ['Apa si canalizare'],
+           ['Puncte apa si canalizare', water.value, 'unit'],
+           ['Suprafata Podea calda', heatedFloor.value, 'm2'],
+           ['Nr. usi', doors.value, 'buc'],
+           ['Final Price', finalPrice],
+           [''],
+            ['Pretul lucrarile executate si numarul executat', 'Pretul', 'Nr. Executii', 'Tip reparatie', 'Total'],
+            ['Lucrari de demontare', 120, 1.00, 'Capital', { f: 'SUM(B5:B7)*B19' }],
+            [''],
+            ['Pregatire suprafete pentru lucru'],
+            ['Zidaria', 120, 1, '', zidarie],
+            ['Curatarea suprafetelor', 12, 1, 'toate', curatireSuprafata],
+            ['Amorsarea suprafetelor', 12, 1, 'toate', amorsareSuprafata],
+            ['Nivelarea peretilor', 150, 1, 'in afara de cosmetica', nivelarePereti],
+            ['Aplicare glet pentru fibra de sticla', 50, 1, 'cu exceptia la tapete', aplicareGlet],
+            ['Nivlare podea', 200, 1, '', nivelarePodea],
+            ['Slefuirea suprafetelor', 25, 1, 'toate', slefuire],
+            ['Total etapa murdara', '', '', '', totalPregatire],
+            [''],
+            ['Apa si canalizarea'],
+            ['Lucrari apa si canalizarea(etapa murdara) incluse', 1500, 15, 'toate', lucrariApaCanalizareMurdar],
+            ['Podele calde', 400, 1, 'Capital', podeleCalde],
+            ['Total etapa murdara apa si canalizarea', '', '', '', totalWater],
+            [''],
+            ['Lucrari cu electricitatea'],
+            ['Etapa murdara electricitate puncte', 220, 105, '', electricMurdar],
+            ['Executare canal pentru cablu', 40, 80, '', executrareCanal],
+            ['Montare cutie automete', 1200, 1, '', montareCutie],
+            ['Asamblare cutia cu automete 60 module', 140, 60, '', asamblareCutie],
+            ['Montare duze pentru prize intrerupatoare', 25, 90, '', montareDuze],
+            ['Astuparea rosturilor dupa trasare', 30, 80, '', astupareRosturiTrasare],
+            ['Total etapa murdara electricitate', '', '', '', totalElectricity],
+            [''],
+            ['Montare teracota'],
+            ['Aplicare hidroizolare', 60, 2, '', hidroizolare],
+            ['Montare teracota pina la 1,2m x 1,2m', 500, 1, '', montareTeracota],
+            ['Montare decoratiuni teracota', 1000, 1, '', montareDecoratiuniTeracota],
+            [' '],
+            ['Pregatirea pentru vopsea'],
+            ['Montare tavane gipscarton (intrun nivel)', 180, 1, '', ghipsocarton],
+            ['Amorsarea rosturilor', 10, 285, '', amorsareRosturi],
+            ['Astuparea rosturilor si armarea acestora', 30, 285, '', astupareRosturi],
+            ['Amorsarea suprafetelor pentru fibra de sticla tavane', 15, 1, '', amorsareFibraSticlaTavan],
+            ['Amorsarea suprafetelor pentru fibra de sticla pereti', 15, 1, '', amorsareFibraSticlaPereti],
+            ['Aplicarea fibrei de sticla tavane', 70, 1, '', aplicareFibraSticlaTavan],
+            ['Aplicarea fibrei de sticla pereti', 70, 1, '', aplicareFibraSticlaPereti],
+            ['Gletuirea tavanelor', 60, 2, '', gletuireTavan],
+            ['Gletuirea suprafetelor care vor fi vopsite', 60, 2, '', gletuireSuprafeteVopsite],
+            ['Gletuirea suprafetelor sub tapete', 45, 0, '', gletuireSubTapete],
+            ['Montarea baghete tavane', 100, 1, '', montareBagheteTavan],
+            ['Montarea plintelor ascunse', 200, 0, '', montarePlinteAscunse],
+            ['Montare moldinguri gips', 100, '', '', montareMoldinguriGips],
+            ['Montarea decoratiunilor', 400, '', '', montareDecoratiuni],
+            ['Slefuirea suprafetelor tavan', 25, 1, '', slefuireTavan],
+            ['Slefuirea suprafetelor pereti', 25, 1, '', slefuirePereti],
+            ['Amorsarea suprafetelor pentru vopsea', 15, 1, '', amorsareSuprafataVopsire],
+            ['Total pregatirea vopsea', '', '', '', totalPregatireVopsea],
+            [' '],
+            ['Finisarea lucrarilor'],
+            ['Vopsirea peretilor', 60, 2, '', vopsirePereti],
+            ['Vopsirea tavanelor', 80, 2, '', vopsireTavan],
+            ['Montare tapete', 100, 0, '', montareTapeta],
+            ['Montarea prizelor /intrerupatoarelor', 50, 120, '', montarePrize],
+            ['Montarea corpurilor de iluminat', 200, 40, '', montareCorpuriIlumintate],
+            ['Montare leduri', 100, 10, '', montareLeduri],
+            ['Montarea obiectelor sanitare', 500, 7.5, '', montareObiecteSanitare],
+            ['Montare usi', 1400, 5, '', montareUsi],
+            ['Total Finisare', '', '', '', totalFinisareLucrari ],
+            ['Costuri totale pachet'],
+            ['Înoire', '', '', '', inoire],
+            ['Cosmetic', '', '', '', cosmetic],
+            ['Capital', '', '', '', capital],
+            ['Individual', '', '', '', individual],
+            ['Pret per m2 pentru lucrarile dvs', '', '', '', finalPrice],
+        ];  
+    
+        let wb = XLSX.utils.book_new();
+       let ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+        // Set column widths
+        ws['!cols'] = [
+            { wch: 40 },
+            { wch: 15 }, 
+            { wch: 15 }, 
+            { wch: 25 }, 
+            { wch: 15 }, 
+            { wch: 15 }      
+        ];
+
+        // Apply text wrapping and bold style to cells
+        for (let i = 0; i < ws_data.length; i++) {
+            for (let j = 0; j < ws_data[i].length; j++) {
+                let cell_ref = XLSX.utils.encode_cell({ r: i, c: j });
+                ws[cell_ref].s = {
+                    font: { bold: true },
+                };
+            }
+        }
+
+       XLSX.utils.book_append_sheet(wb, ws, 'Pret');
+
+       // Download Excel file
+       XLSX.writeFile(wb, 'Pret.xlsx');
     }
 })
 
