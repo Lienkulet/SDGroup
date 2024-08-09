@@ -5524,6 +5524,7 @@ header .welcome_msg span {
 
 #portofolio {
   margin-bottom: 20px;
+  background-image: url('/assets/brick_bg.png');
 }
 #portofolio h4 {
   font: 400 normal 70px Raleway;

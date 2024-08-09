@@ -175,6 +175,8 @@ nav .nav-right .close:hover {
 .about-section{
     font: 500 normal 1.5rem Raleway, sans-serif;
     padding-top: 100px !important;
+    background-image: url('/assets/brick_bg.png');
+
 }
 
 .about-section, .team-section, .quote-section {
