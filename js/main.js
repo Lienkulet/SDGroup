@@ -2,10 +2,10 @@ window.addEventListener('load', function () {
     let body = this.document.querySelector("body");
     if (/Edge/.test(navigator.userAgent))
         body.classList.add("isEdge");
-    l
     
     var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     var viwe_offset = window.innerWidth > 425 ? 240 : 0;
+
     function animateLoad(element, animation, callback) {
         let node = element,
             scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
@@ -14,25 +14,29 @@ window.addEventListener('load', function () {
             if (node.className.indexOf("animated") == -1)
                 animateCSS(node, animation, callback);
     }
+
     const animate_onload = document.querySelectorAll('.should_animate');
     animate_onload.forEach(element => {
         if (scrollTop >= element.offsetTop - window.innerHeight)
             animateLoad(element, element.getAttribute("animate-style"));
     });
+
     window.onscroll = () => {
         let scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
         toogleNav(scrollTop);
         animate_onload.forEach(element => {
             animateLoad(element, "fadeIn");
         });
-        startCount(scrollTop + viwe_offset + 200);
+        startCount(scrollTop + viwe_offset + 200);  // Call startCount when scrolling
     }
+
     function imageExists(image_url) {
         var http = new XMLHttpRequest();
         http.open('HEAD', image_url, false);
         http.send();
         return http.status != 404;
     }
+
     let setImgSrc = function (modal, trigger) {
         let imgSrc = trigger.querySelector("img").getAttribute("src"),
             modalSrc = imgSrc.replace('assets/slider/', 'assets/slider/modal/');
@@ -114,6 +118,7 @@ window.addEventListener('load', function () {
     carousel_prev.onclick = () => {
         carouselInstance.prev();
     }
+
     function slideModalNext(carouselInstance) {
         carouselInstance.next();
         if (carousel_item.nextElementSibling && carousel_item.nextElementSibling.className.indexOf("controlers") == -1)
@@ -122,6 +127,7 @@ window.addEventListener('load', function () {
             carousel_item = document.querySelector("#portofolio .carousel-item");
         setImgSrc(gallery_modal[0].el, carousel_item);
     }
+
     function slideModalPrev(carouselInstance) {
         carouselInstance.prev();
         let last_item = document.querySelectorAll("#portofolio .carousel-item");
@@ -129,18 +135,23 @@ window.addEventListener('load', function () {
         carousel_item = carousel_item.previousElementSibling || last_item;
         setImgSrc(gallery_modal[0].el, carousel_item);
     }
+
     modal_next.onclick = () => {
         slideModalNext(carouselInstance);
     }
+
     modal_prev.onclick = () => {
         slideModalPrev(carouselInstance);
     }
+
     feedback_next.onclick = () => {
         feedbackInstance.next();
     }
+
     feedback_prev.onclick = () => {
         feedbackInstance.prev();
     }
+
     var closestAttr = function (el_class, ev) {
         var target_el = ev.target,
             found = false;
@@ -173,6 +184,7 @@ window.addEventListener('load', function () {
             slideToLocation(event, this.getAttribute('data-position'));
         })
     }
+
     let sidenav_close = document.querySelectorAll(".close_nav"),
         sidenav = M.Sidenav.getInstance(sidenavElems[0]);
     sidenav_close.forEach(element => {
@@ -180,6 +192,7 @@ window.addEventListener('load', function () {
             sidenav.close();
         }
     });
+
     const contactForm = document.getElementById("contactForm");
 
     contactForm.addEventListener("submit", function (e) {
@@ -216,6 +229,7 @@ window.addEventListener('load', function () {
 
         applyForm.reset();
     });
+
     function setCardsHeight() {
         const plans_flip = document.querySelectorAll("#plans .flip_card"),
             plans_card_height = plans_flip[0].querySelector(".flip_card_front img").height,
@@ -229,59 +243,56 @@ window.addEventListener('load', function () {
         });
     }
     setCardsHeight();
-    var count_down = document.getElementById("count_down"),
-        countDownDate = new Date(count_down.getAttribute("data-end")).getTime(),
-        countDown = setInterval(function () {
-            let now = new Date().getTime(),
-                distance = countDownDate - now,
-                days = Math.floor(distance / 86400000),
-                hours = Math.floor((distance % 86400000) / 3600000),
-                minutes = Math.floor((distance % 3600000) / 60000),
-                seconds = Math.floor((distance % 60000) / 1000);
-            count_down.innerHTML =
-                `<span>${Math.floor(days / 10)}</span>
-                <span>${(days % 10)}</span><b>:</b>
-                <span>${Math.floor(hours / 10)}</span>
-                <span>${(hours % 10)}</span><b>:</b>
-                <span>${Math.floor(minutes / 10)}</span>
-                <span>${(minutes % 10)}</span><b>:</b>
-                <span>${Math.floor(seconds / 10)}</span>
-                <span>${(seconds % 10)}</span>`;
+
+    function getEndOfNextMonth() {
+        let today = new Date();
+        let currentMonth = today.getMonth();
+        let currentYear = today.getFullYear();
+
+        // Check if today is the last day of the month
+        let lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+        if (today.getDate() === lastDayOfMonth) {
+            // Set the date to the last day of the next month
+            let endOfNextMonth = new Date(currentYear, currentMonth + 2, 0);
+            return endOfNextMonth;
+        } else {
+            // Otherwise, return the end of the current month
+            return new Date(currentYear, currentMonth + 1, 0);
+        }
+    }
+
+        var count_down = document.getElementById("count_down");
+        var endDate = getEndOfNextMonth(); // Get the appropriate end date
+        var countDownDate = endDate.getTime();
+
+        var countDown = setInterval(function () {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+
             if (distance < 0) {
                 clearInterval(countDown);
+                count_down.innerHTML = "EXPIRED";
                 document.getElementById("count_down").classList.add("expired");
+                return;
             }
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            count_down.innerHTML =
+                `<span>${Math.floor(days / 10)}</span>
+                <span>${days % 10}</span><b>:</b>
+                <span>${Math.floor(hours / 10)}</span>
+                <span>${hours % 10}</span><b>:</b>
+                <span>${Math.floor(minutes / 10)}</span>
+                <span>${minutes % 10}</span><b>:</b>
+                <span>${Math.floor(seconds / 10)}</span>
+                <span>${seconds % 10}</span>`;
         }, 1000);
-    window.onresize = () => {
-        setCardsHeight();
-    }
-
-    let flip_card = document.querySelectorAll(".flip_card_inner ");
-    flip_card.forEach(element => {
-        element.onclick = () => {
-            let daddy = element.parentElement;
-            while (daddy && daddy.className.indexOf('guided') == -1) {
-                daddy = daddy.parentElement;
-            }
-            if (daddy)
-                daddy.classList.remove('guided');
-        }
-    });
 
 
-    function animateValue(element, start, end, duration) {
-        let range = end - start,
-            current = start,
-            increment = end > start ? 1 : -1,
-            stepTime = Math.abs(Math.floor(duration / range)),
-            timer = setInterval(function () {
-                current += increment;
-                element.innerHTML = current + length;
-                if (current == end) {
-                    clearInterval(timer);
-                }
-            }, stepTime);
-    }
     function startCount(windowOffset) {
         let target = document.getElementById("advantages");
         if (windowOffset > target.offsetTop && target.className.indexOf('counting') == -1) {
@@ -293,7 +304,8 @@ window.addEventListener('load', function () {
             animateValue(feedback_item, 0, feedback_item.getAttribute("data-count"), 2500);
             animateValue(years_item, 0, years_item.getAttribute("data-count"), 2000);
         }
-    };
+    }
+
     let fliping_card = document.querySelectorAll('.flip_card');
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         fliping_card.forEach(element => {
@@ -322,7 +334,7 @@ window.addEventListener('load', function () {
         const firstTouch = getTouches(evt)[0];
         xDown = firstTouch.clientX;
         yDown = firstTouch.clientY;
-    };
+    }
 
     function handleTouchMove(evt) {
         if (!xDown || !yDown) {
@@ -344,7 +356,7 @@ window.addEventListener('load', function () {
         }
         xDown = null;
         yDown = null;
-    };
+    }
 
     let carouselImages = this.document.querySelectorAll("#portofolio .carousel-item img");
     setTimeout(() => {
